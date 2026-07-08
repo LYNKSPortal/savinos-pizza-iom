@@ -19,7 +19,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-2xl mx-auto px-6 py-16 flex flex-col items-center">
+      <div className="relative z-10 w-full max-w-2xl mx-auto px-6 py-10 sm:py-16 flex flex-col items-center">
 
         {/* Logo */}
         <div
@@ -32,13 +32,13 @@ export default function Home() {
             width={280}
             height={140}
             priority
-            className="w-64 sm:w-80 md:w-96"
+            className="w-48 sm:w-72 md:w-96"
           />
         </div>
 
         {/* Thin rule */}
         <div
-          className="animate-fade-in animation-fill-both opacity-0 w-px h-10 bg-white/20 mb-10"
+          className="animate-fade-in animation-fill-both opacity-0 w-px h-8 sm:h-10 bg-white/20 mb-8 sm:mb-10"
           style={{ animationDelay: "150ms" }}
         />
 
@@ -47,10 +47,10 @@ export default function Home() {
           className="animate-fade-in animation-fill-both opacity-0 text-center mb-4"
           style={{ animationDelay: "250ms" }}
         >
-          <p className="font-body text-white tracking-[0.35em] uppercase text-[16px] sm:text-[17px] md:text-[18px] mb-5">
+          <p className="font-body text-white tracking-[0.25em] sm:tracking-[0.35em] uppercase text-[13px] sm:text-[16px] md:text-[18px] mb-4 sm:mb-5">
             Coming Soon
           </p>
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight">
+          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight">
             Something<br />
             <span className="italic font-normal text-white/70">delicious</span> awaits.
           </h1>
@@ -58,7 +58,7 @@ export default function Home() {
 
         {/* Tagline */}
         <p
-          className="animate-fade-in animation-fill-both opacity-0 font-body font-light text-white text-[16px] sm:text-[17px] md:text-[18px] text-center max-w-xs leading-relaxed mt-6 mb-12"
+          className="animate-fade-in animation-fill-both opacity-0 font-body font-light text-white text-[14px] sm:text-[17px] md:text-[18px] text-center max-w-xs leading-relaxed mt-4 sm:mt-6 mb-8 sm:mb-12"
           style={{ animationDelay: "350ms" }}
         >
           Fresh slices, hot ovens, and something delicious are on the way.
@@ -66,7 +66,7 @@ export default function Home() {
 
         {/* Countdown */}
         <div
-          className="animate-fade-in animation-fill-both opacity-0 w-full mb-12"
+          className="animate-fade-in animation-fill-both opacity-0 w-full mb-8 sm:mb-12"
           style={{ animationDelay: "450ms" }}
         >
           <CountdownTimer />
@@ -74,21 +74,21 @@ export default function Home() {
 
         {/* Location */}
         <div
-          className="animate-fade-in animation-fill-both opacity-0 flex items-start gap-2 text-center mt-6"
+          className="animate-fade-in animation-fill-both opacity-0 flex items-start gap-3 w-full max-w-xs sm:max-w-none sm:justify-center mt-8 sm:mt-6"
           style={{ animationDelay: "700ms" }}
         >
-          <svg className="w-4 h-4 text-white/50 mt-0.5 shrink-0 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <svg className="w-4 h-4 text-white/50 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
           </svg>
-          <p className="font-body font-light text-white text-[16px] sm:text-[17px] md:text-[18px] leading-relaxed">
+          <p className="font-body font-light text-white text-[14px] sm:text-[17px] md:text-[18px] leading-relaxed">
             Savino&apos;s Pizza, Balthane Industrial Estate, Optical House,<br className="hidden sm:block" /> Ballasalla, Isle of Man, IM9 2AL
           </p>
         </div>
 
         {/* Phone / WhatsApp */}
         <div
-          className="animate-fade-in animation-fill-both opacity-0 flex items-center gap-2 mt-2"
+          className="animate-fade-in animation-fill-both opacity-0 flex items-center gap-3 w-full max-w-xs sm:max-w-none sm:justify-center mt-2"
           style={{ animationDelay: "750ms" }}
         >
           <svg className="w-4 h-4 text-white/50 shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -99,7 +99,7 @@ export default function Home() {
             href="https://wa.me/447624313999"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body font-light text-white text-[16px] sm:text-[17px] md:text-[18px] tracking-wide hover:text-white/70 transition-colors duration-200"
+            className="font-body font-light text-white text-[14px] sm:text-[17px] md:text-[18px] tracking-wide hover:text-white/70 transition-colors duration-200"
           >
             Call or WhatsApp: +44 7624 313999
           </a>
@@ -107,7 +107,7 @@ export default function Home() {
 
         {/* Facebook */}
         <div
-          className="animate-fade-in animation-fill-both opacity-0 flex items-center gap-2 mt-2"
+          className="animate-fade-in animation-fill-both opacity-0 flex items-center gap-3 w-full max-w-xs sm:max-w-none sm:justify-center mt-2"
           style={{ animationDelay: "780ms" }}
         >
           <svg className="w-4 h-4 text-white/50 shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -117,7 +117,7 @@ export default function Home() {
             href="https://www.facebook.com/SavinosPizzaIOM/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body font-light text-white text-[16px] sm:text-[17px] md:text-[18px] tracking-wide hover:text-white/70 transition-colors duration-200"
+            className="font-body font-light text-white text-[14px] sm:text-[17px] md:text-[18px] tracking-wide hover:text-white/70 transition-colors duration-200"
           >
             facebook.com/SavinosPizzaIOM
           </a>
@@ -125,7 +125,7 @@ export default function Home() {
 
         {/* Footer */}
         <p
-          className="animate-fade-in animation-fill-both opacity-0 font-body text-white text-[16px] sm:text-[17px] md:text-[18px] tracking-widest uppercase mt-14"
+          className="animate-fade-in animation-fill-both opacity-0 font-body text-white text-[11px] sm:text-[14px] md:text-[16px] tracking-widest uppercase mt-10 sm:mt-14"
           style={{ animationDelay: "800ms" }}
         >
           © 2026 Savino&apos;s Pizza · All rights reserved
