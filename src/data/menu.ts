@@ -6,6 +6,7 @@ export interface MenuItem {
   price14: number;
   note?: string;
   singlePrice?: number;
+  image?: string;
 }
 
 export interface MenuCategory {
@@ -46,32 +47,35 @@ export const menu: MenuCategory[] = [
     id: "sides",
     title: "Sides",
     items: [
-      { id: "garlic-bread-tomato", name: "Garlic Bread (Tomato)", description: "Stone-baked bread with tomato base", price10: 8.0, price14: 11.0 },
-      { id: "garlic-bread-cheese", name: "Garlic Bread (Cheese)", description: "Stone-baked bread topped with cheese", price10: 9.0, price14: 12.4 },
-      { id: "curly-fries", name: "Curly Fries", description: "Crispy seasoned curly fries", price10: 4.9, price14: 4.9, singlePrice: 4.9 },
+      { id: "garlic-bread-tomato", name: "Garlic Bread (Tomato)", description: "Stone-baked bread with tomato base", price10: 8.0, price14: 11.0, image: "/food/garlic-bread-tomato.jpg" },
+      { id: "garlic-bread-cheese", name: "Garlic Bread (Cheese)", description: "Stone-baked bread topped with cheese", price10: 9.0, price14: 12.4, image: "/food/garlic-bread-cheese.jpg" },
+      { id: "garlic-bread-tomato-chilli", name: "Garlic Bread (Tomato & Chilli)", description: "Stone-baked bread with tomato base and chilli", price10: 9.0, price14: 12.4, image: "/food/garlic-bread-tomato-and-chilli.jpg" },
+      { id: "garlic-bread-cheese-mushroom", name: "Garlic Bread (Cheese & Mushroom)", description: "Stone-baked bread topped with cheese and mushroom", price10: 9.9, price14: 13.9, image: "/food/garlic-bread-cheese-and-mushroom.jpg" },
+      { id: "garlic-bread-chilli-cheese", name: "Garlic Bread (Chilli & Cheese)", description: "Stone-baked bread topped with chilli and cheese", price10: 9.9, price14: 13.9, image: "/food/garlic-bread-chilli-and-cheese.jpg" },
+      { id: "curly-fries", name: "Curly Fries", description: "Crispy seasoned curly fries", price10: 4.9, price14: 4.9, singlePrice: 4.9, image: "/food/curly-fries.jpg" },
     ],
   },
   {
     id: "pizza-menu",
     title: "Main Menu",
     items: [
-      { id: "margherita", name: "Margherita", description: "Cheese & Tomato", price10: 9.9, price14: 12.4 },
-      { id: "napoletana", name: "Napoletana", description: "Anchovies", price10: 10.9, price14: 15.4 },
-      { id: "prosciutto", name: "Prosciutto", description: "Ham", price10: 10.9, price14: 15.4 },
-      { id: "funghi", name: "Funghi", description: "Mushrooms", price10: 10.9, price14: 15.4 },
-      { id: "pepperoni", name: "Pepperoni", description: "Pepperoni", price10: 10.9, price14: 15.4 },
-      { id: "prosciutto-funghi", name: "Prosciutto & Funghi", description: "Ham & Mushrooms", price10: 11.9, price14: 16.9 },
-      { id: "tropicana", name: "Tropicana", description: "Ham & Pineapple", price10: 11.9, price14: 16.9 },
-      { id: "don-antonio", name: "Don Antonio", description: "Chicken & Pepperoni", price10: 11.9, price14: 18.4 },
-      { id: "al-tonno", name: "Al Tonno", description: "Tuna, Anchovies & Olives", price10: 12.9, price14: 18.4 },
-      { id: "gioconda", name: "Gioconda", description: "Sweetcorn, Salami & Chicken", price10: 12.9, price14: 18.4 },
-      { id: "pollo-e-spinaci", name: "Pollo E Spinaci", description: "Chicken, Spinach, Onions & Goats Cheese", price10: 13.9, price14: 19.9 },
-      { id: "vegetarian", name: "Vegetarian", description: "Mushrooms, Onions, Sweetcorn & Peppers", price10: 13.9, price14: 19.9 },
-      { id: "capricciosa", name: "Capricciosa", description: "Mushrooms, Artichokes, Salsiccia, Salami & Garlic", price10: 13.9, price14: 19.9 },
-      { id: "quattro-stagioni", name: "Quattro Stagioni", description: "Ham, Mushrooms, Onions & Peppers", price10: 13.9, price14: 19.9 },
-      { id: "vesuvio", name: "Vesuvio", description: "Ham, Pepperoni, Salsiccia, Jalapeño Peppers & Hot Sauce", price10: 13.9, price14: 19.9 },
-      { id: "boscaiola", name: "Boscaiola", description: "Ham, Mushrooms, Salsiccia & Salami", price10: 13.9, price14: 19.9 },
-      { id: "ai-frutti-di-mare", name: "Ai Frutti Di Mare", description: "Seafood, Peppers & Onions", price10: 14.9, price14: 21.4 },
+      { id: "margherita", name: "Margherita", description: "Cheese & Tomato", price10: 9.9, price14: 12.4, image: "/food/margherita.jpg" },
+      { id: "napoletana", name: "Napoletana", description: "Anchovies", price10: 10.9, price14: 15.4, image: "/food/napoletana.jpg" },
+      { id: "prosciutto", name: "Prosciutto", description: "Ham", price10: 10.9, price14: 15.4, image: "/food/prosciutto.jpg" },
+      { id: "funghi", name: "Funghi", description: "Mushrooms", price10: 10.9, price14: 15.4, image: "/food/funghi.jpg" },
+      { id: "pepperoni", name: "Pepperoni", description: "Pepperoni", price10: 10.9, price14: 15.4, image: "/food/pepperoni.jpg" },
+      { id: "prosciutto-funghi", name: "Prosciutto & Funghi", description: "Ham & Mushrooms", price10: 11.9, price14: 16.9, image: "/food/prosciutto-funghi.jpg" },
+      { id: "tropicana", name: "Tropicana", description: "Ham & Pineapple", price10: 11.9, price14: 16.9, image: "/food/tropicana.jpg" },
+      { id: "don-antonio", name: "Don Antonio", description: "Chicken & Pepperoni", price10: 11.9, price14: 18.4, image: "/food/don-antonio.jpg" },
+      { id: "al-tonno", name: "Al Tonno", description: "Tuna, Anchovies & Olives", price10: 12.9, price14: 18.4, image: "/food/al-tonno.jpg" },
+      { id: "gioconda", name: "Gioconda", description: "Sweetcorn, Salami & Chicken", price10: 12.9, price14: 18.4, image: "/food/gioconda.jpg" },
+      { id: "pollo-e-spinaci", name: "Pollo E Spinaci", description: "Chicken, Spinach, Onions & Goats Cheese", price10: 13.9, price14: 19.9, image: "/food/pollo-e-spinaci.jpg" },
+      { id: "vegetarian", name: "Vegetarian", description: "Mushrooms, Onions, Sweetcorn & Peppers", price10: 13.9, price14: 19.9, image: "/food/vegetarian.jpg" },
+      { id: "capricciosa", name: "Capricciosa", description: "Mushrooms, Artichokes, Salsiccia, Salami & Garlic", price10: 13.9, price14: 19.9, image: "/food/capricciosa.jpg" },
+      { id: "quattro-stagioni", name: "Quattro Stagioni", description: "Ham, Mushrooms, Onions & Peppers", price10: 13.9, price14: 19.9, image: "/food/quattro-stagioni.jpg" },
+      { id: "vesuvio", name: "Vesuvio", description: "Ham, Pepperoni, Salsiccia, Jalapeño Peppers & Hot Sauce", price10: 13.9, price14: 19.9, image: "/food/vesuvio.jpg" },
+      { id: "boscaiola", name: "Boscaiola", description: "Ham, Mushrooms, Salsiccia & Salami", price10: 13.9, price14: 19.9, image: "/food/boscaiola.jpg" },
+      { id: "ai-frutti-di-mare", name: "Ai Frutti Di Mare", description: "Seafood, Peppers & Onions", price10: 14.9, price14: 21.4, image: "/food/ai-frutti-di-mare.jpg" },
       {
         id: "savinos",
         name: "Savino's",
@@ -79,6 +83,7 @@ export const menu: MenuCategory[] = [
         price10: 14.9,
         price14: 21.4,
         note: "Blue Cheese optional",
+        image: "/food/savinos-pizza.jpg",
       },
       {
         id: "meaty-one",
@@ -87,7 +92,18 @@ export const menu: MenuCategory[] = [
         price10: 14.9,
         price14: 21.4,
         note: "Blue Cheese optional",
+        image: "/food/meaty-one.jpg",
       },
+    ],
+  },
+  {
+    id: "drinks",
+    title: "Drinks",
+    items: [
+      { id: "pepsi-max", name: "Pepsi Max", description: "330ml can", price10: 2.0, price14: 2.0, singlePrice: 2.0, image: "/drinks/pepsi-max-can.jpg" },
+      { id: "san-pellegrino-can", name: "San Pellegrino Aranciata", description: "Can", price10: 2.5, price14: 2.5, singlePrice: 2.5, image: "/drinks/sanpellegrino-aranciata-can.jpg" },
+      { id: "aqua-panna", name: "Aqua Panna", description: "Still mineral water", price10: 2.5, price14: 2.5, singlePrice: 2.5, image: "/drinks/acqua-panna-can.jpg" },
+      { id: "san-pellegrino-sparkling", name: "San Pellegrino Sparkling", description: "Sparkling mineral water", price10: 2.5, price14: 2.5, singlePrice: 2.5, image: "/drinks/sanpellegrino-sparkling-can.jpg" },
     ],
   },
 ];

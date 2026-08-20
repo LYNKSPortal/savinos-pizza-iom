@@ -136,14 +136,19 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {featured.map((item) => (
-            <div key={item.id} className="bg-white/[0.04] border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
-              <div className="flex items-start justify-between gap-3">
-                <h3 className="font-display text-xl font-bold text-white">{item.name}</h3>
-                <span className="font-body text-white/70 text-sm whitespace-nowrap">
-                  £{item.price10.toFixed(2)} / £{item.price14.toFixed(2)}
-                </span>
+            <div key={item.id} className="bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden flex flex-col">
+              <div className="relative aspect-square">
+                <Image src={item.image ?? "/lots-of-pizzas.jpg"} alt={item.name} fill className="object-cover" style={{ filter: "saturate(0.9)" }} />
               </div>
-              <p className="font-body text-white/50 text-sm leading-relaxed">{item.description}</p>
+              <div className="p-6 flex flex-col gap-3">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-display text-xl font-bold text-white">{item.name}</h3>
+                  <span className="font-body text-white/70 text-sm whitespace-nowrap">
+                    £{item.price10.toFixed(2)} / £{item.price14.toFixed(2)}
+                  </span>
+                </div>
+                <p className="font-body text-white/50 text-sm leading-relaxed">{item.description}</p>
+              </div>
             </div>
           ))}
         </div>

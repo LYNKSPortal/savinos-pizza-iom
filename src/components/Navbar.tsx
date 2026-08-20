@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useCart } from "@/context/CartContext";
 
 const LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/menu", label: "Menu" },
+  { href: "/order", label: "Order Now" },
   { href: "/gallery", label: "Gallery" },
   { href: "/events", label: "Events" },
   { href: "/contact", label: "Contact" },
@@ -16,6 +18,7 @@ const LINKS = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { itemCount, subtotal } = useCart();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -70,15 +73,25 @@ export default function Navbar() {
           </ul>
 
           <Link
-            href="/order"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm hover:bg-white/90 transition-colors duration-200"
+            href="/basket"
+            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm hover:bg-white/90 transition-colors duration-200"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 11h.01M11 15h.01M16 16h.01" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="m2 16 20 6-6-20A20 20 0 0 0 2 16" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4" />
-            </svg>
-            Order Now
+            <span className="flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h15l-1.5 9h-12z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 6 5 3H2" />
+                <circle cx="9" cy="19" r="1.2" fill="currentColor" stroke="none" />
+                <circle cx="17" cy="19" r="1.2" fill="currentColor" stroke="none" />
+              </svg>
+              Basket
+              {itemCount > 0 && (
+                <span className="flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-[#fbb22a] text-[#163b49] text-[10px] font-bold">
+                  {itemCount}
+                </span>
+              )}
+            </span>
+            <span className="w-px h-4 bg-[#163b49]/20" />
+            <span className="tabular-nums">£{subtotal.toFixed(2)}</span>
           </Link>
         </div>
 
@@ -126,16 +139,25 @@ export default function Navbar() {
           })}
           <li>
             <Link
-              href="/order"
+              href="/basket"
               onClick={() => setOpen(false)}
-              className="inline-flex items-center gap-2 mt-2 px-5 py-2.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm"
+              className="inline-flex items-center justify-between gap-3 mt-2 px-5 py-2.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 11h.01M11 15h.01M16 16h.01" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="m2 16 20 6-6-20A20 20 0 0 0 2 16" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4" />
-              </svg>
-              Order Now
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h15l-1.5 9h-12z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 6 5 3H2" />
+                  <circle cx="9" cy="19" r="1.2" fill="currentColor" stroke="none" />
+                  <circle cx="17" cy="19" r="1.2" fill="currentColor" stroke="none" />
+                </svg>
+                Basket
+                {itemCount > 0 && (
+                  <span className="flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-[#fbb22a] text-[#163b49] text-[10px] font-bold">
+                    {itemCount}
+                  </span>
+                )}
+              </span>
+              <span className="tabular-nums">£{subtotal.toFixed(2)}</span>
             </Link>
           </li>
         </ul>
