@@ -19,7 +19,7 @@ export default function Events() {
     <div className="bg-[#163b49]">
 
       {/* Page hero */}
-      <section className="relative h-[40vh] min-h-[320px] flex items-center overflow-hidden">
+      <section className="relative h-[55vh] min-h-[420px] flex items-center overflow-hidden">
         <Image
           src="/lots-of-pizzas.jpg"
           alt=""

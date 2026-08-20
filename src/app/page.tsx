@@ -84,7 +84,7 @@ export default function Home() {
           </div>
 
           {/* Bottom: feature strip */}
-          <div className="animate-fade-in animation-fill-both opacity-0 grid grid-cols-1 sm:grid-cols-3 gap-10 w-full" style={{ animationDelay: "500ms" }}>
+          <div className="hidden sm:grid animate-fade-in animation-fill-both opacity-0 grid-cols-3 gap-10 w-full" style={{ animationDelay: "500ms" }}>
             {FEATURES.map((feature) => (
               <div key={feature.title} className="flex flex-col items-center gap-3 text-center">
                 <svg className="w-8 h-8 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.3}>
