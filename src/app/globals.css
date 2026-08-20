@@ -19,7 +19,7 @@ html {
 
 body {
   font-family: var(--font-lato);
-  background: #23353f;
+  background: #1d4d5f;
   color: #e8f0f5;
   min-height: 100vh;
 }
@@ -46,5 +46,12 @@ body {
   }
   .animation-fill-both {
     animation-fill-mode: both;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

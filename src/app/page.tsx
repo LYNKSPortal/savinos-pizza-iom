@@ -1,137 +1,186 @@
 import Image from "next/image";
-import CountdownTimer from "@/components/CountdownTimer";
+import Link from "next/link";
+import { menu } from "@/data/menu";
+
+const FEATURED_IDS = ["margherita", "pepperoni", "vesuvio", "prosciutto-funghi", "don-antonio", "savinos"];
+const featured = menu
+  .flatMap((c) => c.items)
+  .filter((item) => FEATURED_IDS.includes(item.id));
+
+const FEATURES = [
+  {
+    title: "Authentic Italian",
+    description: "Traditional recipes, imported ingredients, hand-stretched dough.",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 2.25c-4.5 0-8.25 3.75-8.25 8.25S7.5 21.75 12 21.75s8.25-6.75 8.25-11.25S16.5 2.25 12 2.25z" />
+    ),
+  },
+  {
+    title: "Freshly Made",
+    description: "Every pizza is made to order and baked fresh in our ovens.",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v3.75M6.75 6.75l2.15 2.15M17.25 6.75l-2.15 2.15M3 12h3.75M17.25 12H21M6.75 17.25l2.15-2.15M17.25 17.25l-2.15-2.15M12 17.25V21" />
+    ),
+  },
+  {
+    title: "Collection & Delivery",
+    description: "Order online for fast collection or delivery across the island.",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM18.75 18.75a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM3.75 6.75h10.5v9.75H4.5a.75.75 0 01-.75-.75V6.75zM14.25 9.75h3l3 3.75v3a.75.75 0 01-.75.75h-1.5" />
+    ),
+  },
+];
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0d1117]">
+    <div className="bg-[#163b49]">
 
-      {/* Background photo — heavily darkened */}
-      <Image
-        src="/lots-of-pizzas.jpg"
-        alt=""
-        fill
-        priority
-        className="object-cover object-center scale-105"
-        style={{ filter: "brightness(0.18) saturate(0.6)" }}
-      />
-
-      {/* Vignette */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
-
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-2xl mx-auto px-6 py-10 sm:py-16 flex flex-col items-center">
-
-        {/* Logo */}
-        <div
-          className="animate-fade-in animation-fill-both mb-10 opacity-0"
-          style={{ animationDelay: "100ms" }}
+      {/* Hero */}
+      <section className="relative h-screen overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center scale-105"
+          style={{ filter: "brightness(0.4) saturate(0.7)" }}
         >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#163b49]" />
+
+        <div className="relative z-10 h-full w-full max-w-6xl mx-auto px-6 pt-28 pb-16 flex flex-col items-center text-center">
+          {/* Top + middle: kicker, heading, description, buttons — centered as a group */}
+          <div className="flex-1 flex flex-col items-center justify-center">
+            <p className="animate-fade-in animation-fill-both opacity-0 font-body text-[#fbb22a] tracking-[0.3em] uppercase text-xs sm:text-sm mb-5" style={{ animationDelay: "100ms" }}>
+              Est. Ballasalla, Isle of Man
+            </p>
+            <h1 className="animate-fade-in animation-fill-both opacity-0 font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight w-full" style={{ animationDelay: "200ms" }}>
+              Something<br />
+              <span className="italic font-normal text-white/70">delicious</span>, always.
+            </h1>
+            <p className="animate-fade-in animation-fill-both opacity-0 font-body font-light text-white text-base sm:text-lg max-w-xl leading-relaxed mt-6 mb-10" style={{ animationDelay: "300ms" }}>
+              Fresh slices, hot ovens, and authentic Italian recipes — made to order, every single day.
+            </p>
+            <div className="animate-fade-in animation-fill-both opacity-0 flex flex-wrap justify-center gap-4" style={{ animationDelay: "400ms" }}>
+              <Link
+                href="/order"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors duration-200"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11h.01M11 15h.01M16 16h.01" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m2 16 20 6-6-20A20 20 0 0 0 2 16" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4" />
+                </svg>
+                Order Now
+              </Link>
+              <Link
+                href="/menu"
+                className="px-7 py-3.5 rounded-full border border-white/30 text-white font-body font-semibold text-sm tracking-wide hover:bg-white/10 transition-colors duration-200"
+              >
+                View Menu
+              </Link>
+            </div>
+          </div>
+
+          {/* Bottom: feature strip */}
+          <div className="animate-fade-in animation-fill-both opacity-0 grid grid-cols-1 sm:grid-cols-3 gap-10 w-full" style={{ animationDelay: "500ms" }}>
+            {FEATURES.map((feature) => (
+              <div key={feature.title} className="flex flex-col items-center gap-3 text-center">
+                <svg className="w-8 h-8 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.3}>
+                  {feature.icon}
+                </svg>
+                <h3 className="font-display text-lg font-bold text-white">{feature.title}</h3>
+                <p className="font-body text-white/60 text-sm leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About teaser */}
+      <section className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+        <div className="relative w-full h-72 sm:h-96 rounded-2xl overflow-hidden">
           <Image
-            src="/logo/logo-white-ver.png"
-            alt="Savino's Pizza"
-            width={280}
-            height={140}
-            priority
-            className="w-48 sm:w-72 md:w-96"
+            src="/lots-of-pizzas.jpg"
+            alt="Savino's Pizza kitchen"
+            fill
+            className="object-cover"
+            style={{ filter: "saturate(0.85)" }}
           />
         </div>
-
-        {/* Thin rule */}
-        <div
-          className="animate-fade-in animation-fill-both opacity-0 w-px h-8 sm:h-10 bg-white/20 mb-8 sm:mb-10"
-          style={{ animationDelay: "150ms" }}
-        />
-
-        {/* Headline */}
-        <div
-          className="animate-fade-in animation-fill-both opacity-0 text-center mb-4"
-          style={{ animationDelay: "250ms" }}
-        >
-          <p className="font-body text-white tracking-[0.25em] sm:tracking-[0.35em] uppercase text-[13px] sm:text-[16px] md:text-[18px] mb-4 sm:mb-5">
-            Coming Soon
+        <div>
+          <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">Our Story</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
+            Handmade pizza,<br /> made with heart.
+          </h2>
+          <p className="font-body text-white/50 text-sm sm:text-base leading-relaxed mb-8 max-w-md">
+            Savino&apos;s brings authentic Italian pizza to Ballasalla — hand-stretched dough,
+            slow-simmered sauces, and the finest ingredients, baked fresh every day.
           </p>
-          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight">
-            Something<br />
-            <span className="italic font-normal text-white/70">delicious</span> awaits.
-          </h1>
+          <Link
+            href="/about"
+            className="font-body text-white text-sm font-semibold tracking-wide border-b border-white/40 hover:border-white pb-1 transition-colors duration-200"
+          >
+            Learn more about us →
+          </Link>
         </div>
+      </section>
 
-        {/* Tagline */}
-        <p
-          className="animate-fade-in animation-fill-both opacity-0 font-body font-light text-white text-[14px] sm:text-[17px] md:text-[18px] text-center max-w-xs leading-relaxed mt-4 sm:mt-6 mb-8 sm:mb-12"
-          style={{ animationDelay: "350ms" }}
-        >
-          Fresh slices, hot ovens, and something delicious are on the way.
-        </p>
-
-        {/* Countdown */}
-        <div
-          className="animate-fade-in animation-fill-both opacity-0 w-full mb-8 sm:mb-12"
-          style={{ animationDelay: "450ms" }}
-        >
-          <CountdownTimer />
+      {/* Menu teaser */}
+      <section className="bg-[#0e262f] px-6 py-20">
+        <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-14">
+          <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">Fan Favourites</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">From the Oven</h2>
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {featured.map((item) => (
+            <div key={item.id} className="bg-white/[0.04] border border-white/10 rounded-2xl p-6 flex flex-col gap-3">
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="font-display text-xl font-bold text-white">{item.name}</h3>
+                <span className="font-body text-white/70 text-sm whitespace-nowrap">
+                  £{item.price10.toFixed(2)} / £{item.price14.toFixed(2)}
+                </span>
+              </div>
+              <p className="font-body text-white/50 text-sm leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-12">
+          <Link
+            href="/menu"
+            className="inline-block px-7 py-3.5 rounded-full border border-white/30 text-white font-body font-semibold text-sm tracking-wide hover:bg-white/10 transition-colors duration-200"
+          >
+            View Full Menu
+          </Link>
+        </div>
+        </div>
+      </section>
 
-        {/* Location */}
-        <div
-          className="animate-fade-in animation-fill-both opacity-0 flex items-start gap-3 w-full max-w-xs sm:max-w-none sm:justify-center mt-8 sm:mt-6"
-          style={{ animationDelay: "700ms" }}
-        >
-          <svg className="w-4 h-4 text-white/50 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-          </svg>
-          <p className="font-body font-light text-white text-[14px] sm:text-[17px] md:text-[18px] leading-relaxed">
-            Savino&apos;s Pizza, Balthane Industrial Estate, Optical House,<br className="hidden sm:block" /> Ballasalla, Isle of Man, IM9 2AL
+      {/* CTA banner */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <div className="bg-white/[0.04] border border-white/10 rounded-3xl px-8 sm:px-16 py-16 flex flex-col items-center text-center gap-6">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">
+            Hungry? Let&apos;s fix that.
+          </h2>
+          <p className="font-body text-white/50 text-sm sm:text-base max-w-md leading-relaxed">
+            Order online for collection or delivery — fresh, hot, and ready when you are.
           </p>
-        </div>
-
-        {/* Phone / WhatsApp */}
-        <div
-          className="animate-fade-in animation-fill-both opacity-0 flex items-center gap-3 w-full max-w-xs sm:max-w-none sm:justify-center mt-2"
-          style={{ animationDelay: "750ms" }}
-        >
-          <svg className="w-4 h-4 text-white/50 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.858L.057 23.428a.75.75 0 00.921.921l5.57-1.475A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.707 9.707 0 01-4.953-1.355l-.355-.212-3.31.877.877-3.31-.212-.355A9.707 9.707 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
-          </svg>
-          <a
-            href="https://wa.me/447624313999"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body font-light text-white text-[14px] sm:text-[17px] md:text-[18px] tracking-wide hover:text-white/70 transition-colors duration-200"
+          <Link
+            href="/order"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors duration-200"
           >
-            Call or WhatsApp: +44 7624 313999
-          </a>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 11h.01M11 15h.01M16 16h.01" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="m2 16 20 6-6-20A20 20 0 0 0 2 16" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4" />
+            </svg>
+            Order Now
+          </Link>
         </div>
+      </section>
 
-        {/* Facebook */}
-        <div
-          className="animate-fade-in animation-fill-both opacity-0 flex items-center gap-3 w-full max-w-xs sm:max-w-none sm:justify-center mt-2"
-          style={{ animationDelay: "780ms" }}
-        >
-          <svg className="w-4 h-4 text-white/50 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.252h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-          </svg>
-          <a
-            href="https://www.facebook.com/SavinosPizzaIOM/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body font-light text-white text-[14px] sm:text-[17px] md:text-[18px] tracking-wide hover:text-white/70 transition-colors duration-200"
-          >
-            facebook.com/SavinosPizzaIOM
-          </a>
-        </div>
-
-        {/* Footer */}
-        <p
-          className="animate-fade-in animation-fill-both opacity-0 font-body text-white text-[11px] sm:text-[14px] md:text-[16px] tracking-widest uppercase mt-10 sm:mt-14"
-          style={{ animationDelay: "800ms" }}
-        >
-          © 2026 Savino&apos;s Pizza · All rights reserved
-        </p>
-
-      </div>
-    </main>
+    </div>
   );
 }

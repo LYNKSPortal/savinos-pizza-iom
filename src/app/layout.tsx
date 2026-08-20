@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Savino's Pizza — Coming Soon",
+  title: "Savino's Pizza — Freshly Made Italian Pizza",
   description:
-    "Fresh slices, hot ovens, and something delicious are on the way. Sign up to be the first to know when Savino's Pizza opens.",
+    "Authentic Italian pizza freshly made in Ballasalla, Isle of Man. Order online for collection or delivery.",
   openGraph: {
-    title: "Savino's Pizza — Coming Soon",
-    description: "Fresh slices, hot ovens, and something delicious are on the way.",
+    title: "Savino's Pizza — Freshly Made Italian Pizza",
+    description: "Authentic Italian pizza freshly made in Ballasalla, Isle of Man.",
     type: "website",
   },
 };
@@ -27,7 +29,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased bg-[#163b49]">
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

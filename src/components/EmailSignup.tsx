@@ -61,7 +61,7 @@ export default function EmailSignup() {
           className="
             absolute right-1.5
             px-5 py-2.5 rounded-full
-            bg-white text-[#0d1117]
+            bg-white text-[#163b49]
             font-body font-semibold text-sm tracking-wide
             transition-all duration-200
             hover:bg-white/90
