@@ -25,11 +25,12 @@ export interface Topping {
 }
 
 export const toppings: Topping[] = [
-  { id: "chicken", name: "Chicken", price10: 1.0, price14: 1.5 },
   { id: "ham", name: "Ham", price10: 1.0, price14: 1.5 },
   { id: "pepperoni-topping", name: "Pepperoni", price10: 1.0, price14: 1.5 },
+  { id: "smoked-sausage", name: "Smoked Sausage", price10: 1.0, price14: 1.5 },
   { id: "salsiccia", name: "Salsiccia", price10: 1.0, price14: 1.5 },
   { id: "salami", name: "Salami", price10: 1.0, price14: 1.5 },
+  { id: "chicken", name: "Chicken", price10: 1.0, price14: 1.5 },
   { id: "tuna", name: "Tuna", price10: 1.0, price14: 1.5 },
   { id: "anchovies", name: "Anchovies", price10: 1.0, price14: 1.5 },
   { id: "pineapple", name: "Pineapple", price10: 1.0, price14: 1.5 },
@@ -38,7 +39,6 @@ export const toppings: Topping[] = [
   { id: "onions", name: "Onions", price10: 1.0, price14: 1.5 },
   { id: "peppers", name: "Peppers", price10: 1.0, price14: 1.5 },
   { id: "jalapeno-peppers", name: "Jalapeño Peppers", price10: 1.0, price14: 1.5 },
-  { id: "smoked-sausage", name: "Smoked Sausage", price10: 1.0, price14: 1.5 },
   { id: "olives", name: "Olives", price10: 1.0, price14: 1.5 },
   { id: "mozzarella", name: "Mozzarella", price10: 1.0, price14: 1.5 },
   { id: "cheddar", name: "Cheddar", price10: 1.0, price14: 1.5 },
