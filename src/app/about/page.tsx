@@ -37,14 +37,30 @@ export default function About() {
           </h2>
           <div className="flex flex-col gap-4 font-body text-white/50 text-sm sm:text-base leading-relaxed">
             <p>
-              Years ago, Savino&apos;s Pizza wasn&apos;t a building, it was a trailer. We travelled
-              from location to location around the Isle of Man, setting up wherever the next event
-              was, cooking pizza for whoever turned up.
+              Savino&apos;s has its roots in a family passion for traditional Italian pizza, but the
+              Savino&apos;s Pizza story, as most people on the Isle of Man know it, began in 2012.
+            </p>
+            <p>It started with an A4 sheet of paper, a pencil, a ruler and an idea.</p>
+            <p>
+              Mike Savino wanted to create something of his own, built around the kind of pizza he
+              had grown up knowing and loving.
+            </p>
+            <p>Savino&apos;s Pizza was born.</p>
+            <p>
+              Mike designed a purpose-built mobile pizza trailer and had it built from scratch. From
+              there, we travelled around the Isle of Man, setting up wherever the next event took us.
             </p>
             <p>
-              It took a big team and a lot of hard work, but it built something special: real
-              experiences, long queues, and a lot of good memories. If you grew up on the Island,
-              there&apos;s a good chance you&apos;ve got a story about the old Savino&apos;s trailer.
+              TT week, shows, festivals, rallies and events, wherever the crowds were, chances are
+              the Savino&apos;s trailer wasn&apos;t far away.
+            </p>
+            <p>
+              It was never just about selling pizza. It was about the atmosphere, the people and the
+              memories we made along the way.
+            </p>
+            <p>
+              If you&apos;ve been on the Island for a while, there&apos;s a good chance you&apos;ve
+              got a story about the old Savino&apos;s trailer.
             </p>
           </div>
         </div>
@@ -74,18 +90,29 @@ export default function About() {
           <div className="order-1 md:order-2">
             <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">A Team, A Following</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
-              Loads of people, loads of memories.
+              Loads of people. Loads of pizzas. Loads of memories.
             </h2>
             <div className="flex flex-col gap-4 font-body text-white/50 text-sm sm:text-base leading-relaxed">
               <p>
-                TT week, country shows, festivals, wherever we parked up, people came. The queues
-                were part of the fun, and the team behind that trailer poured everything into every
-                single pizza that came out of it.
+                TT week, country shows, festivals and events, wherever we parked up, people came.
               </p>
               <p>
-                That energy, that buzz, those good vibes, that&apos;s the heart of Savino&apos;s, and
-                it&apos;s exactly what we&apos;re bringing with us into this next chapter.
+                The queues became part of the experience, helped in no small part by our lovely
+                server Donna 😆, and the team behind that little trailer put everything into every
+                pizza that came out of it.
               </p>
+              <p>There was always a buzz around Savino&apos;s.</p>
+              <p>
+                People chatting while they waited, music playing, the smell of pizzas cooking and a
+                team working flat-out inside the trailer.
+              </p>
+              <p>
+                At some events, we kept the beer tent fed and they kept us topped up with cider. It
+                was that kind of operation! At times, I think we were having more fun working inside
+                the trailer than the partygoers were having outside.
+              </p>
+              <p>That energy, that atmosphere and those good times became the heart of Savino&apos;s.</p>
+              <p>And that&apos;s exactly what we want to bring into the next chapter.</p>
             </div>
           </div>
         </div>
@@ -100,13 +127,21 @@ export default function About() {
           </h2>
           <div className="flex flex-col gap-4 font-body text-white/50 text-sm sm:text-base leading-relaxed">
             <p>
-              The trailer gave us something portable and a little scrappy, and it worked. Now
-              Savino&apos;s Pizza has a proper venue in Ballasalla, and we want to take all that
-              history, all that energy, and build it into something permanent.
+              The trailer was mobile, slightly chaotic at times, but somehow, that was part of its
+              charm.
+            </p>
+            <p>Now Savino&apos;s Pizza has a permanent home in Ballasalla.</p>
+            <p>
+              We want to take everything people loved about the original Savino&apos;s, the
+              atmosphere, the characters, the memories and, most importantly, the pizza, and build
+              something around it.
             </p>
             <p>
-              Same spirit, same care, just somewhere you can always find us.
+              A place to meet friends, have a drink, enjoy some great food and hopefully make a few
+              more memories.
             </p>
+            <p>Same spirit. Same passion for pizza. Just a whole new chapter.</p>
+            <p>And somewhere you can always find us.</p>
           </div>
         </div>
         <div className="relative w-full h-72 sm:h-[420px] rounded-2xl overflow-hidden">
@@ -125,19 +160,36 @@ export default function About() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">What&apos;s Coming</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
-            Always something new around the corner.
+            There&apos;s always something new around the corner.
           </h2>
           <div className="flex flex-col gap-4 font-body text-white/50 text-sm sm:text-base leading-relaxed mb-10">
             <p>
-              Expect pizzas you already know and love, alongside new ones you&apos;ve never tried.
-              We&apos;ve got ideas from all over the world that we&apos;re slowly going to introduce,
-              test, and refine. Some will stick, some won&apos;t, and that&apos;s half the fun.
+              You can expect all the pizzas you already know and love, alongside plenty of new ideas
+              to come.
             </p>
+            <p>
+              We&apos;ve taken inspiration from food and flavours from around the world, and over
+              time we&apos;ll be introducing new pizzas, specials and probably a few things you
+              wouldn&apos;t normally expect from us.
+            </p>
+            <p>
+              We&apos;ll experiment. We&apos;ll try things. Some ideas will become favourites and
+              some probably won&apos;t make it past the specials board.
+            </p>
+            <p>But that&apos;s half the fun.</p>
+            <p>Because if there&apos;s one thing you can say about Mike Savino, it&apos;s this:</p>
           </div>
           <blockquote className="font-display text-xl sm:text-2xl text-white italic leading-relaxed border-l-2 border-[#fbb22a] pl-6 text-left max-w-xl mx-auto">
-            &ldquo;If there&apos;s one thing you can say about Mike Savino, it&apos;s that he&apos;s
-            always chasing the next thing, always experimenting to see what people love.&rdquo;
+            &ldquo;He&apos;s an all-or-nothing kind of guy. He&apos;s never been afraid to try
+            something different, take an idea and run with it, and see what people love.&rdquo;
           </blockquote>
+          <div className="flex flex-col gap-4 font-body text-white/50 text-sm sm:text-base leading-relaxed mt-10">
+            <p>
+              Savino&apos;s might have started with a pencil, a piece of paper and a pizza trailer
+              back in 2012, but that was only the beginning.
+            </p>
+            <p>The Savino&apos;s story is still being written.</p>
+          </div>
         </div>
       </section>
 
