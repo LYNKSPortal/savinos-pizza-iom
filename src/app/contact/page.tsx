@@ -36,9 +36,10 @@ export default function Contact() {
             <h3 className="font-body text-white text-xs tracking-[0.2em] uppercase mb-3">Visit Us</h3>
             <p className="font-body text-white/60 text-sm leading-relaxed">
               Savino&apos;s Pizza,<br />
+              Unit KB1, Harcourt Drive,<br />
               Balthane Industrial Estate,<br />
-              Optical House, Ballasalla,<br />
-              Isle of Man, IM9 2AL
+              Ballasalla, Isle of Man,<br />
+              IM9 2AH
             </p>
           </div>
           <div>
@@ -73,7 +74,7 @@ export default function Contact() {
       <section className="w-full h-80 sm:h-96 relative border-t border-white/10">
         <iframe
           title="Savino's Pizza location"
-          src="https://www.google.com/maps?q=Balthane+Industrial+Estate+Ballasalla+Isle+of+Man+IM9+2AL&output=embed"
+          src="https://www.google.com/maps?q=Unit+KB1+Harcourt+Drive+Balthane+Industrial+Estate+Ballasalla+Isle+of+Man+IM9+2AH&output=embed"
           className="w-full h-full border-0"
           style={{ filter: "invert(0.9) contrast(0.9)" }}
           loading="lazy"

@@ -50,7 +50,7 @@ export default function About() {
         </div>
         <div className="relative w-full h-72 sm:h-[420px] rounded-2xl overflow-hidden">
           <Image
-            src="/about-us/Untitled-1.jpg"
+            src="/our-story.jpg"
             alt="Savino's Pizza trailer kitchen"
             fill
             className="object-cover"

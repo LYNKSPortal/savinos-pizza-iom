@@ -54,10 +54,7 @@ export default function Home() {
               Something<br />
               <span className="italic font-normal text-white/70">delicious</span>, always.
             </h1>
-            <p className="animate-fade-in animation-fill-both opacity-0 font-body font-light text-white text-base sm:text-lg max-w-xl leading-relaxed mt-6 mb-10" style={{ animationDelay: "300ms" }}>
-              Authentic Italian recipes, made to order every single day.
-            </p>
-            <div className="animate-fade-in animation-fill-both opacity-0 flex flex-wrap justify-center gap-4" style={{ animationDelay: "400ms" }}>
+            <div className="animate-fade-in animation-fill-both opacity-0 flex flex-wrap justify-center gap-4 mt-10" style={{ animationDelay: "400ms" }}>
               <Link
                 href={ORDER_URL}
                 target="_blank"

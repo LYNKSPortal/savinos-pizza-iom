@@ -33,9 +33,10 @@ export default function Footer() {
         <div>
           <h4 className="font-body text-white text-xs tracking-[0.2em] uppercase mb-4">Visit Us</h4>
           <p className="font-body text-white/50 text-sm leading-relaxed">
+            Unit KB1, Harcourt Drive,<br />
             Balthane Industrial Estate,<br />
-            Optical House, Ballasalla,<br />
-            Isle of Man, IM9 2AL
+            Ballasalla, Isle of Man,<br />
+            IM9 2AH
           </p>
         </div>
 
