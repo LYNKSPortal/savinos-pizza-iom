@@ -118,6 +118,38 @@ export default function About() {
         </div>
       </section>
 
+      {/* Trailer days gallery */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <div className="text-center mb-10">
+          <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">The Trailer Days</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">
+            A few memories along the way.
+          </h2>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {[
+            { src: "/about-us/trailer-team-1.jpg", alt: "The Savino's team at the trailer" },
+            { src: "/about-us/trailer-team-2.jpg", alt: "The Savino's team serving pizza" },
+            { src: "/about-us/trailer-closeup.jpg", alt: "The Savino's Pizza trailer" },
+            { src: "/about-us/trailer-countryshow.jpg", alt: "Savino's Pizza at a country show" },
+            { src: "/about-us/trailer-party-1.jpg", alt: "The buzz around the Savino's trailer" },
+            { src: "/about-us/trailer-party-2.jpg", alt: "The Savino's team having fun" },
+            { src: "/about-us/trailer-festival-night.jpg", alt: "Savino's Pizza at a festival" },
+            { src: "/about-us/trailer-moviefield.jpg", alt: "Savino's Pizza at an outdoor event" },
+          ].map((photo) => (
+            <div key={photo.src} className="relative aspect-square rounded-xl overflow-hidden">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+                style={{ filter: "saturate(0.9)" }}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* The next chapter */}
       <section className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
         <div>
