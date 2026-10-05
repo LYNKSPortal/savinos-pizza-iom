@@ -1,11 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { menu } from "@/data/menu";
-
-const FEATURED_IDS = ["margherita", "pepperoni", "vesuvio", "prosciutto-funghi", "don-antonio", "savinos"];
-const featured = menu
-  .flatMap((c) => c.items)
-  .filter((item) => FEATURED_IDS.includes(item.id));
+import { ORDER_URL } from "@/data/constants";
 
 const FEATURES = [
   {
@@ -60,11 +55,13 @@ export default function Home() {
               <span className="italic font-normal text-white/70">delicious</span>, always.
             </h1>
             <p className="animate-fade-in animation-fill-both opacity-0 font-body font-light text-white text-base sm:text-lg max-w-xl leading-relaxed mt-6 mb-10" style={{ animationDelay: "300ms" }}>
-              Fresh slices, hot ovens, and authentic Italian recipes — made to order, every single day.
+              Fresh slices, hot ovens, and authentic Italian recipes, made to order every single day.
             </p>
             <div className="animate-fade-in animation-fill-both opacity-0 flex flex-wrap justify-center gap-4" style={{ animationDelay: "400ms" }}>
               <Link
-                href="/order"
+                href={ORDER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors duration-200"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -115,7 +112,7 @@ export default function Home() {
             Handmade pizza,<br /> made with heart.
           </h2>
           <p className="font-body text-white/50 text-sm sm:text-base leading-relaxed mb-8 max-w-md">
-            Savino&apos;s brings authentic Italian pizza to Ballasalla — hand-stretched dough,
+            Savino&apos;s brings authentic Italian pizza to Ballasalla, hand-stretched dough,
             slow-simmered sauces, and the finest ingredients, baked fresh every day.
           </p>
           <Link
@@ -127,42 +124,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Menu teaser */}
-      <section className="bg-[#0e262f] px-6 py-20">
-        <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-14">
-          <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">Fan Favourites</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">From the Oven</h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          {featured.map((item) => (
-            <div key={item.id} className="bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden flex flex-col">
-              <div className="relative aspect-square">
-                <Image src={item.image ?? "/lots-of-pizzas.jpg"} alt={item.name} fill className="object-cover" style={{ filter: "saturate(0.9)" }} />
-              </div>
-              <div className="p-6 flex flex-col gap-3">
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-display text-xl font-bold text-white">{item.name}</h3>
-                  <span className="font-body text-white/70 text-sm whitespace-nowrap">
-                    £{item.price10.toFixed(2)} / £{item.price14.toFixed(2)}
-                  </span>
-                </div>
-                <p className="font-body text-white/50 text-sm leading-relaxed">{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-12">
-          <Link
-            href="/menu"
-            className="inline-block px-7 py-3.5 rounded-full border border-white/30 text-white font-body font-semibold text-sm tracking-wide hover:bg-white/10 transition-colors duration-200"
-          >
-            View Full Menu
-          </Link>
-        </div>
-        </div>
-      </section>
-
       {/* CTA banner */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="bg-white/[0.04] border border-white/10 rounded-3xl px-8 sm:px-16 py-16 flex flex-col items-center text-center gap-6">
@@ -170,10 +131,12 @@ export default function Home() {
             Hungry? Let&apos;s fix that.
           </h2>
           <p className="font-body text-white/50 text-sm sm:text-base max-w-md leading-relaxed">
-            Order online for collection or delivery — fresh, hot, and ready when you are.
+            Order online for collection or delivery, fresh, hot, and ready when you are.
           </p>
           <Link
-            href="/order"
+            href={ORDER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors duration-200"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

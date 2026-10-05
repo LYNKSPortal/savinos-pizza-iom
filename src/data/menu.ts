@@ -39,8 +39,21 @@ export const toppings: Topping[] = [
   { id: "peppers", name: "Peppers", price10: 1.0, price14: 1.5 },
   { id: "jalapeno-peppers", name: "Jalapeño Peppers", price10: 1.0, price14: 1.5 },
   { id: "smoked-sausage", name: "Smoked Sausage", price10: 1.0, price14: 1.5 },
+  { id: "olives", name: "Olives", price10: 1.0, price14: 1.5 },
+  { id: "mozzarella", name: "Mozzarella", price10: 1.0, price14: 1.5 },
+  { id: "cheddar", name: "Cheddar", price10: 1.0, price14: 1.5 },
+  { id: "goats-cheese", name: "Goat's Cheese", price10: 1.0, price14: 1.5 },
   { id: "blue-cheese", name: "Blue Cheese", price10: 1.0, price14: 1.5 },
 ];
+
+export const glutenFreeNote = {
+  title: "Gluten-Free Bases Available",
+  price10: 2.0,
+  price14: 3.0,
+  disclaimer:
+    "Gluten-free bases are made using gluten-free flour. They are prepared in a kitchen and oven where wheat flour is used and may therefore contain traces of gluten.",
+  warning: "Not suitable for people with coeliac disease or a severe wheat allergy.",
+};
 
 export const menu: MenuCategory[] = [
   {
@@ -68,10 +81,8 @@ export const menu: MenuCategory[] = [
       { id: "tropicana", name: "Tropicana", description: "Ham & Pineapple", price10: 11.9, price14: 16.9, image: "/food/tropicana.jpg" },
       { id: "don-antonio", name: "Don Antonio", description: "Chicken & Pepperoni", price10: 11.9, price14: 18.4, image: "/food/don-antonio.jpg" },
       { id: "al-tonno", name: "Al Tonno", description: "Tuna, Anchovies & Olives", price10: 12.9, price14: 18.4, image: "/food/al-tonno.jpg" },
-      { id: "gioconda", name: "Gioconda", description: "Sweetcorn, Salami & Chicken", price10: 12.9, price14: 18.4, image: "/food/gioconda.jpg" },
-      { id: "pollo-e-spinaci", name: "Pollo E Spinaci", description: "Chicken, Spinach, Onions & Goats Cheese", price10: 13.9, price14: 19.9, image: "/food/pollo-e-spinaci.jpg" },
+      { id: "pollo-e-spinaci", name: "Pollo E Spinaci", description: "Chicken, Spinach, Onions & Goat's Cheese", price10: 13.9, price14: 19.9, image: "/food/pollo-e-spinaci.jpg" },
       { id: "vegetarian", name: "Vegetarian", description: "Mushrooms, Onions, Sweetcorn & Peppers", price10: 13.9, price14: 19.9, image: "/food/vegetarian.jpg" },
-      { id: "capricciosa", name: "Capricciosa", description: "Mushrooms, Artichokes, Salsiccia, Salami & Garlic", price10: 13.9, price14: 19.9, image: "/food/capricciosa.jpg" },
       { id: "quattro-stagioni", name: "Quattro Stagioni", description: "Ham, Mushrooms, Onions & Peppers", price10: 13.9, price14: 19.9, image: "/food/quattro-stagioni.jpg" },
       { id: "vesuvio", name: "Vesuvio", description: "Ham, Pepperoni, Salsiccia, Jalapeño Peppers & Hot Sauce", price10: 13.9, price14: 19.9, image: "/food/vesuvio.jpg" },
       { id: "boscaiola", name: "Boscaiola", description: "Ham, Mushrooms, Salsiccia & Salami", price10: 13.9, price14: 19.9, image: "/food/boscaiola.jpg" },
@@ -82,7 +93,6 @@ export const menu: MenuCategory[] = [
         description: "Mushrooms, Onions, Sweetcorn, Olives, Peppers, Ham, Pepperoni, Salami & Smoked Sausage",
         price10: 14.9,
         price14: 21.4,
-        note: "Blue Cheese optional",
         image: "/food/savinos-pizza.jpg",
       },
       {
@@ -91,7 +101,6 @@ export const menu: MenuCategory[] = [
         description: "Ham, Chicken, Pepperoni, Salsiccia, Salami & Smoked Sausage",
         price10: 14.9,
         price14: 21.4,
-        note: "Blue Cheese optional",
         image: "/food/meaty-one.jpg",
       },
     ],
@@ -101,7 +110,7 @@ export const menu: MenuCategory[] = [
     title: "Drinks",
     items: [
       { id: "pepsi-max", name: "Pepsi Max", description: "330ml can", price10: 2.0, price14: 2.0, singlePrice: 2.0, image: "/drinks/pepsi-max-can.jpg" },
-      { id: "san-pellegrino-can", name: "San Pellegrino Aranciata", description: "Can", price10: 2.5, price14: 2.5, singlePrice: 2.5, image: "/drinks/sanpellegrino-aranciata-can.jpg" },
+      { id: "san-pellegrino-can", name: "San Pellegrino", description: "Various flavours", price10: 2.5, price14: 2.5, singlePrice: 2.5, image: "/drinks/sanpellegrino-aranciata-can.jpg" },
       { id: "aqua-panna", name: "Aqua Panna", description: "Still mineral water", price10: 2.5, price14: 2.5, singlePrice: 2.5, image: "/drinks/acqua-panna-can.jpg" },
       { id: "san-pellegrino-sparkling", name: "San Pellegrino Sparkling", description: "Sparkling mineral water", price10: 2.5, price14: 2.5, singlePrice: 2.5, image: "/drinks/sanpellegrino-sparkling-can.jpg" },
     ],

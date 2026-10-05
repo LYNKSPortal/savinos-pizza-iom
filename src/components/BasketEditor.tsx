@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import Link from "next/link";
 import { menu, toppings } from "@/data/menu";
 import { useCart, isPizzaItem, Size, Base } from "@/context/CartContext";
+import { ORDER_URL } from "@/data/constants";
 
 const BASE_LABELS: Record<Base, string> = {
   regular: "Regular Tomato Base",
@@ -22,7 +23,9 @@ export default function BasketEditor() {
           Add some pizza to your basket before checking out.
         </p>
         <Link
-          href="/order"
+          href={ORDER_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex px-7 py-3.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm hover:bg-white/90 transition-colors duration-200"
         >
           Browse the Menu

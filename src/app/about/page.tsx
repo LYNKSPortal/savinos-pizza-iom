@@ -7,21 +7,6 @@ export const metadata: Metadata = {
   description: "Learn about Savino's Pizza — authentic Italian pizza made fresh in Ballasalla, Isle of Man.",
 };
 
-const VALUES = [
-  {
-    title: "Quality Ingredients",
-    description: "San Marzano tomatoes, fresh mozzarella, and locally sourced produce wherever possible.",
-  },
-  {
-    title: "Traditional Technique",
-    description: "Slow-fermented dough, hand-stretched and stone-baked for the perfect base.",
-  },
-  {
-    title: "Made With Care",
-    description: "Every pizza is made to order — no shortcuts, no compromise.",
-  },
-];
-
 export default function About() {
   return (
     <div className="bg-[#163b49]">
@@ -29,7 +14,7 @@ export default function About() {
       {/* Page hero */}
       <section className="relative h-[55vh] min-h-[420px] flex items-center overflow-hidden">
         <Image
-          src="/lots-of-pizzas.jpg"
+          src="/about-us/Untitled-2.jpg"
           alt=""
           fill
           priority
@@ -43,32 +28,30 @@ export default function About() {
         </div>
       </section>
 
-      {/* Story */}
+      {/* Where it all began */}
       <section className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
         <div>
-          <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">Since Day One</p>
+          <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">Where It All Began</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
-            Bringing authentic Italy<br /> to Ballasalla.
+            The pizza trailer<br /> everyone remembers.
           </h2>
           <div className="flex flex-col gap-4 font-body text-white/50 text-sm sm:text-base leading-relaxed">
             <p>
-              Savino&apos;s Pizza was born from a simple idea: pizza should be made properly,
-              with real ingredients, real technique, and real care. No shortcuts.
+              Years ago, Savino&apos;s Pizza wasn&apos;t a building, it was a trailer. We travelled
+              from location to location around the Isle of Man, setting up wherever the next event
+              was, cooking pizza for whoever turned up.
             </p>
             <p>
-              From our kitchen in Ballasalla, we hand-stretch every base, simmer our sauces
-              slowly, and bake each pizza fresh to order — the way it&apos;s meant to be done.
-            </p>
-            <p>
-              Whether you&apos;re picking up a quick lunch or ordering for the whole family,
-              we treat every pizza with the same attention to detail.
+              It took a big team and a lot of hard work, but it built something special: real
+              experiences, long queues, and a lot of good memories. If you grew up on the Island,
+              there&apos;s a good chance you&apos;ve got a story about the old Savino&apos;s trailer.
             </p>
           </div>
         </div>
         <div className="relative w-full h-72 sm:h-[420px] rounded-2xl overflow-hidden">
           <Image
-            src="/lots-of-pizzas.jpg"
-            alt="Fresh pizzas at Savino's"
+            src="/about-us/Untitled-1.jpg"
+            alt="Savino's Pizza trailer kitchen"
             fill
             className="object-cover"
             style={{ filter: "saturate(0.85)" }}
@@ -76,22 +59,85 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* The crowd / memories */}
       <section className="bg-[#0e262f] px-6 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">What We Believe In</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">Our Values</h2>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+          <div className="relative w-full h-72 sm:h-[420px] rounded-2xl overflow-hidden order-2 md:order-1">
+            <Image
+              src="/about-us/Untitled-5.jpg"
+              alt="Crowds queueing at the Savino's Pizza trailer"
+              fill
+              className="object-cover"
+              style={{ filter: "saturate(0.85)" }}
+            />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
-            {VALUES.map((value, i) => (
-              <div key={value.title} className="flex flex-col gap-4">
-                <span className="font-display text-white/25 text-4xl font-bold">0{i + 1}</span>
-                <h3 className="font-display text-xl font-bold text-white">{value.title}</h3>
-                <p className="font-body text-white/50 text-sm leading-relaxed">{value.description}</p>
-              </div>
-            ))}
+          <div className="order-1 md:order-2">
+            <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">A Team, A Following</p>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
+              Loads of people, loads of memories.
+            </h2>
+            <div className="flex flex-col gap-4 font-body text-white/50 text-sm sm:text-base leading-relaxed">
+              <p>
+                TT week, country shows, festivals, wherever we parked up, people came. The queues
+                were part of the fun, and the team behind that trailer poured everything into every
+                single pizza that came out of it.
+              </p>
+              <p>
+                That energy, that buzz, those good vibes, that&apos;s the heart of Savino&apos;s, and
+                it&apos;s exactly what we&apos;re bringing with us into this next chapter.
+              </p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* The next chapter */}
+      <section className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+        <div>
+          <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">The Next Chapter</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
+            Now, we&apos;ve got a home<br /> in Ballasalla.
+          </h2>
+          <div className="flex flex-col gap-4 font-body text-white/50 text-sm sm:text-base leading-relaxed">
+            <p>
+              The trailer gave us something portable and a little scrappy, and it worked. Now
+              Savino&apos;s Pizza has a proper venue in Ballasalla, and we want to take all that
+              history, all that energy, and build it into something permanent.
+            </p>
+            <p>
+              Same spirit, same care, just somewhere you can always find us.
+            </p>
+          </div>
+        </div>
+        <div className="relative w-full h-72 sm:h-[420px] rounded-2xl overflow-hidden">
+          <Image
+            src="/about-us/Untitled-4.jpg"
+            alt="The original Savino's Pizza trailer"
+            fill
+            className="object-cover"
+            style={{ filter: "saturate(0.85)" }}
+          />
+        </div>
+      </section>
+
+      {/* What's coming */}
+      <section className="bg-[#0e262f] px-6 py-20">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">What&apos;s Coming</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
+            Always something new around the corner.
+          </h2>
+          <div className="flex flex-col gap-4 font-body text-white/50 text-sm sm:text-base leading-relaxed mb-10">
+            <p>
+              Expect pizzas you already know and love, alongside new ones you&apos;ve never tried.
+              We&apos;ve got ideas from all over the world that we&apos;re slowly going to introduce,
+              test, and refine. Some will stick, some won&apos;t, and that&apos;s half the fun.
+            </p>
+          </div>
+          <blockquote className="font-display text-xl sm:text-2xl text-white italic leading-relaxed border-l-2 border-[#fbb22a] pl-6 text-left max-w-xl mx-auto">
+            &ldquo;If there&apos;s one thing you can say about Mike Savino, it&apos;s that he&apos;s
+            always chasing the next thing, always experimenting to see what people love.&rdquo;
+          </blockquote>
         </div>
       </section>
 

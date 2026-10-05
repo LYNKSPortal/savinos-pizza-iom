@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { menu } from "@/data/menu";
 import { useCart, isPizzaItem, Base } from "@/context/CartContext";
+import { ORDER_URL } from "@/data/constants";
 
 type Fulfilment = "collection" | "delivery";
 type Status = "idle" | "loading" | "success" | "error";
@@ -48,7 +49,7 @@ export default function CheckoutForm() {
         <h2 className="font-display text-3xl font-bold text-white mb-4">Order Received!</h2>
         <p className="font-body text-white/50 text-sm sm:text-base leading-relaxed max-w-md mx-auto">
           Thanks, {name}. We&apos;ve got your {fulfilment} order for £{total.toFixed(2)}.
-          We&apos;ll call {phone} shortly to confirm — or reach us directly on{" "}
+          We&apos;ll call {phone} shortly to confirm, or reach us directly on{" "}
           <a href="https://wa.me/447624313999" target="_blank" rel="noopener noreferrer" className="text-white underline">
             WhatsApp
           </a>.
@@ -65,7 +66,9 @@ export default function CheckoutForm() {
           Add some pizza to your basket before checking out.
         </p>
         <Link
-          href="/order"
+          href={ORDER_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex px-7 py-3.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm hover:bg-white/90 transition-colors duration-200"
         >
           Browse the Menu

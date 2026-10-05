@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { menu, menuNote, toppings } from "@/data/menu";
+import { menu, menuNote, toppings, glutenFreeNote } from "@/data/menu";
+import { ORDER_URL } from "@/data/constants";
 
 export const metadata: Metadata = {
   title: "Menu — Savino's Pizza",
@@ -114,25 +115,29 @@ export default function Menu() {
 
       {/* Extra toppings */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-6">Extra Toppings</h2>
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="border-b border-white/20">
-              <th className="py-3 text-left font-body text-white/40 text-xs tracking-widest uppercase">Topping</th>
-              <th className="py-3 text-right font-body text-white/40 text-xs tracking-widest uppercase w-20">10&quot;</th>
-              <th className="py-3 text-right font-body text-white/40 text-xs tracking-widest uppercase w-20">14&quot;</th>
-            </tr>
-          </thead>
-          <tbody>
-            {toppings.map((topping) => (
-              <tr key={topping.id} className="border-b border-white/10 hover:bg-white/[0.03] transition-colors">
-                <td className="py-3.5 pr-4 font-body text-white text-sm">{topping.name}</td>
-                <td className="py-3.5 text-right font-body text-white/70 text-sm whitespace-nowrap">£{topping.price10.toFixed(2)}</td>
-                <td className="py-3.5 text-right font-body text-white/70 text-sm whitespace-nowrap">£{topping.price14.toFixed(2)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-6">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-white">Extra Toppings</h2>
+          <p className="font-body text-white/50 text-sm whitespace-nowrap">
+            10&quot; £{toppings[0].price10.toFixed(2)} each &nbsp;/&nbsp; 14&quot; £{toppings[0].price14.toFixed(2)} each
+          </p>
+        </div>
+        <p className="font-body text-white/70 text-sm leading-relaxed">
+          {toppings.map((t) => t.name).join(" • ")}
+        </p>
+      </section>
+
+      {/* Gluten-free bases */}
+      <section className="max-w-6xl mx-auto px-6 pb-16">
+        <div className="bg-white/[0.04] border border-white/10 rounded-2xl px-6 sm:px-10 py-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-white">{glutenFreeNote.title}</h2>
+            <p className="font-body text-white text-sm whitespace-nowrap">
+              10&quot; +£{glutenFreeNote.price10.toFixed(2)} &nbsp;/&nbsp; 14&quot; +£{glutenFreeNote.price14.toFixed(2)}
+            </p>
+          </div>
+          <p className="font-body text-white/40 text-xs leading-relaxed mb-2">{glutenFreeNote.disclaimer}</p>
+          <p className="font-body text-white/40 text-xs italic leading-relaxed">{glutenFreeNote.warning}</p>
+        </div>
       </section>
 
       {/* CTA */}
@@ -145,7 +150,9 @@ export default function Menu() {
             Choose collection or delivery and we&apos;ll get it started right away.
           </p>
           <Link
-            href="/order"
+            href={ORDER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors duration-200"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

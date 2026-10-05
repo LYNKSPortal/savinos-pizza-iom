@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ORDER_URL } from "@/data/constants";
 
 export default function Footer() {
   return (
@@ -24,9 +25,7 @@ export default function Footer() {
           <ul className="flex flex-col gap-3">
             <li><Link href="/about" className="font-body text-white/50 hover:text-white text-sm transition-colors">About Us</Link></li>
             <li><Link href="/menu" className="font-body text-white/50 hover:text-white text-sm transition-colors">Our Menu</Link></li>
-            <li><Link href="/gallery" className="font-body text-white/50 hover:text-white text-sm transition-colors">Gallery</Link></li>
-            <li><Link href="/events" className="font-body text-white/50 hover:text-white text-sm transition-colors">Events</Link></li>
-            <li><Link href="/order" className="font-body text-white/50 hover:text-white text-sm transition-colors">Order Online</Link></li>
+            <li><a href={ORDER_URL} target="_blank" rel="noopener noreferrer" className="font-body text-white/50 hover:text-white text-sm transition-colors">Order Online</a></li>
             <li><Link href="/contact" className="font-body text-white/50 hover:text-white text-sm transition-colors">Contact Us</Link></li>
           </ul>
         </div>

@@ -4,21 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useCart } from "@/context/CartContext";
+import { ORDER_URL } from "@/data/constants";
 
 const LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/menu", label: "Menu" },
-  { href: "/order", label: "Order Now" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/events", label: "Events" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Homepage" },
+  { href: "/about", label: "About Us" },
+  { href: "/menu", label: "Our Menu" },
+  { href: ORDER_URL, label: "Order Now", external: true },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
-  const { itemCount, subtotal } = useCart();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -58,6 +54,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className={`font-body text-sm tracking-wide uppercase transition-colors duration-200 relative ${
                       active ? "text-white" : "text-white/50 hover:text-white"
                     }`}
@@ -73,25 +70,14 @@ export default function Navbar() {
           </ul>
 
           <Link
-            href="/basket"
-            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm hover:bg-white/90 transition-colors duration-200"
+            href="/contact"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm hover:bg-white/90 transition-colors duration-200"
           >
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h15l-1.5 9h-12z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 6 5 3H2" />
-                <circle cx="9" cy="19" r="1.2" fill="currentColor" stroke="none" />
-                <circle cx="17" cy="19" r="1.2" fill="currentColor" stroke="none" />
-              </svg>
-              Basket
-              {itemCount > 0 && (
-                <span className="flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-[#fbb22a] text-[#163b49] text-[10px] font-bold">
-                  {itemCount}
-                </span>
-              )}
-            </span>
-            <span className="w-px h-4 bg-[#163b49]/20" />
-            <span className="tabular-nums">£{subtotal.toFixed(2)}</span>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0-.828.672-1.5 1.5-1.5h16.5c.828 0 1.5.672 1.5 1.5v10.5c0 .828-.672 1.5-1.5 1.5H3.75a1.5 1.5 0 0 1-1.5-1.5V6.75Z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="m3 7 9 6 9-6" />
+            </svg>
+            Contact Us
           </Link>
         </div>
 
@@ -128,6 +114,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
+                  {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className={`font-body text-base tracking-wide uppercase ${
                     active ? "text-white" : "text-white/50"
                   }`}
@@ -139,25 +126,15 @@ export default function Navbar() {
           })}
           <li>
             <Link
-              href="/basket"
+              href="/contact"
               onClick={() => setOpen(false)}
-              className="inline-flex items-center justify-between gap-3 mt-2 px-5 py-2.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm"
+              className="inline-flex items-center gap-2 justify-center mt-2 px-5 py-2.5 rounded-full bg-white text-[#163b49] font-body font-semibold text-sm"
             >
-              <span className="flex items-center gap-2">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h15l-1.5 9h-12z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 6 5 3H2" />
-                  <circle cx="9" cy="19" r="1.2" fill="currentColor" stroke="none" />
-                  <circle cx="17" cy="19" r="1.2" fill="currentColor" stroke="none" />
-                </svg>
-                Basket
-                {itemCount > 0 && (
-                  <span className="flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-[#fbb22a] text-[#163b49] text-[10px] font-bold">
-                    {itemCount}
-                  </span>
-                )}
-              </span>
-              <span className="tabular-nums">£{subtotal.toFixed(2)}</span>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0-.828.672-1.5 1.5-1.5h16.5c.828 0 1.5.672 1.5 1.5v10.5c0 .828-.672 1.5-1.5 1.5H3.75a1.5 1.5 0 0 1-1.5-1.5V6.75Z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="m3 7 9 6 9-6" />
+              </svg>
+              Contact Us
             </Link>
           </li>
         </ul>
