@@ -84,6 +84,7 @@ export const menu: MenuCategory[] = [
       { id: "pollo-e-spinaci", name: "Pollo E Spinaci", description: "Chicken, Spinach, Onions & Goat's Cheese", price10: 13.9, price14: 19.9, image: "/food/pollo-e-spinaci.jpg" },
       { id: "vegetarian", name: "Vegetarian", description: "Mushrooms, Onions, Sweetcorn & Peppers", price10: 13.9, price14: 19.9, image: "/food/vegetarian.jpg" },
       { id: "quattro-stagioni", name: "Quattro Stagioni", description: "Ham, Mushrooms, Onions & Peppers", price10: 13.9, price14: 19.9, image: "/food/quattro-stagioni.jpg" },
+      { id: "quattro-formaggi", name: "Quattro Formaggi", description: "Mozzarella, Cheddar, Goat's Cheese & Blue Cheese", price10: 13.9, price14: 19.9 },
       { id: "vesuvio", name: "Vesuvio", description: "Ham, Pepperoni, Salsiccia, Jalapeño Peppers & Hot Sauce", price10: 13.9, price14: 19.9, image: "/food/vesuvio.jpg" },
       { id: "boscaiola", name: "Boscaiola", description: "Ham, Mushrooms, Salsiccia & Salami", price10: 13.9, price14: 19.9, image: "/food/boscaiola.jpg" },
       { id: "ai-frutti-di-mare", name: "Ai Frutti Di Mare", description: "Seafood, Peppers & Onions", price10: 14.9, price14: 21.4, image: "/food/ai-frutti-di-mare.jpg" },
