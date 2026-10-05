@@ -48,7 +48,7 @@ export default function Home() {
           {/* Top + middle: kicker, heading, description, buttons — centered as a group */}
           <div className="flex-1 flex flex-col items-center justify-center">
             <p className="animate-fade-in animation-fill-both opacity-0 font-body text-[#fbb22a] tracking-[0.3em] uppercase text-xs sm:text-sm mb-5" style={{ animationDelay: "100ms" }}>
-              Est. Ballasalla, Isle of Man
+              Est 2012, Isle of Man
             </p>
             <h1 className="animate-fade-in animation-fill-both opacity-0 font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight w-full" style={{ animationDelay: "200ms" }}>
               Something<br />
