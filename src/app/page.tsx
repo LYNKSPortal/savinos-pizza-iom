@@ -51,9 +51,12 @@ export default function Home() {
               Est 2012, Isle of Man
             </p>
             <h1 className="animate-fade-in animation-fill-both opacity-0 font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight w-full" style={{ animationDelay: "200ms" }}>
-              Something<br />
-              <span className="italic font-normal text-white/70">delicious</span>, always.
+              Dalla nostra famiglia<br />
+              <span className="italic font-normal text-white/70">alla vostra.</span>
             </h1>
+            <p className="animate-fade-in animation-fill-both opacity-0 font-body text-white/50 text-sm sm:text-base mt-4" style={{ animationDelay: "250ms" }}>
+              From our family to yours.
+            </p>
             <div className="animate-fade-in animation-fill-both opacity-0 flex flex-wrap justify-center gap-4 mt-10" style={{ animationDelay: "400ms" }}>
               <Link
                 href={ORDER_URL}
@@ -106,11 +109,11 @@ export default function Home() {
         <div>
           <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">Our Story</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
-            Handmade pizza,<br /> made with heart.
+            Handmade pizza,<br /> made with passion.
           </h2>
           <p className="font-body text-white/50 text-sm sm:text-base leading-relaxed mb-8 max-w-md">
             Savino&apos;s brings authentic Italian pizza to Ballasalla, hand-stretched dough,
-            slow-simmered sauces, and the finest ingredients, baked fresh every day.
+            home made sauces, and the finest ingredients, baked fresh every day.
           </p>
           <Link
             href="/about"
