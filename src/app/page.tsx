@@ -52,9 +52,9 @@ export default function Home() {
             </p>
             <h1 className="animate-fade-in animation-fill-both opacity-0 font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight w-full" style={{ animationDelay: "200ms" }}>
               Dalla nostra famiglia<br />
-              <span className="italic font-normal text-white/70">alla vostra.</span>
+              alla vostra.
             </h1>
-            <p className="animate-fade-in animation-fill-both opacity-0 font-body text-white/50 text-sm sm:text-base mt-4" style={{ animationDelay: "250ms" }}>
+            <p className="animate-fade-in animation-fill-both opacity-0 font-body text-white/70 text-base sm:text-lg mt-5" style={{ animationDelay: "250ms" }}>
               From our family to yours.
             </p>
             <div className="animate-fade-in animation-fill-both opacity-0 flex flex-wrap justify-center gap-4 mt-10" style={{ animationDelay: "400ms" }}>

@@ -74,7 +74,7 @@ export default function Contact() {
       <section className="w-full h-80 sm:h-96 relative border-t border-white/10">
         <iframe
           title="Savino's Pizza location"
-          src="https://www.google.com/maps?q=Unit+KB1+Harcourt+Drive+Balthane+Industrial+Estate+Ballasalla+Isle+of+Man+IM9+2AH&output=embed"
+          src="https://www.google.com/maps?q=54.092694,-4.628083&output=embed"
           className="w-full h-full border-0"
           style={{ filter: "invert(0.9) contrast(0.9)" }}
           loading="lazy"

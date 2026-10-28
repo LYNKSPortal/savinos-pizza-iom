@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { menu, toppings, glutenFreeNote } from "@/data/menu";
+import { menu, toppings } from "@/data/menu";
 import { ORDER_URL } from "@/data/constants";
 
 export const metadata: Metadata = {
@@ -123,20 +123,6 @@ export default function Menu() {
         <p className="font-body text-white/70 text-sm leading-relaxed">
           {toppings.map((t) => t.name).join(" • ")}
         </p>
-      </section>
-
-      {/* Gluten-free bases */}
-      <section className="max-w-6xl mx-auto px-6 pb-16">
-        <div className="bg-white/[0.04] border border-white/10 rounded-2xl px-6 sm:px-10 py-8">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
-            <h2 className="font-display text-xl sm:text-2xl font-bold text-white">{glutenFreeNote.title}</h2>
-            <p className="font-body text-white text-sm whitespace-nowrap">
-              10&quot; +£{glutenFreeNote.price10.toFixed(2)} &nbsp;/&nbsp; 14&quot; +£{glutenFreeNote.price14.toFixed(2)}
-            </p>
-          </div>
-          <p className="font-body text-white/40 text-xs leading-relaxed mb-2">{glutenFreeNote.disclaimer}</p>
-          <p className="font-body text-white/40 text-xs italic leading-relaxed">{glutenFreeNote.warning}</p>
-        </div>
       </section>
 
       {/* CTA */}

@@ -134,8 +134,10 @@ export default function About() {
             { src: "/about-us/trailer-countryshow.jpg", alt: "Savino's Pizza at a country show" },
             { src: "/about-us/trailer-party-1.jpg", alt: "The buzz around the Savino's trailer" },
             { src: "/about-us/trailer-party-2.jpg", alt: "The Savino's team having fun" },
-            { src: "/about-us/trailer-festival-night.jpg", alt: "Savino's Pizza at a festival" },
             { src: "/about-us/trailer-moviefield.jpg", alt: "Savino's Pizza at an outdoor event" },
+            { src: "/about-us/Untitled-0001.jpg", alt: "Fun and games at the Savino's trailer" },
+            { src: "/about-us/Untitled-0002.jpg", alt: "The Savino's team with a pizza box" },
+            { src: "/about-us/Untitled-0003.jpg", alt: "Inside the Savino's Pizza trailer" },
           ].map((photo) => (
             <div key={photo.src} className="relative aspect-square rounded-xl overflow-hidden">
               <Image
