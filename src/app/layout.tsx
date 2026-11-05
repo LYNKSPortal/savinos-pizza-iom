@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
@@ -32,6 +33,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-[#163b49]">
         <CartProvider>
+          <AnnouncementBar />
           <Navbar />
           <main>{children}</main>
           <Footer />
