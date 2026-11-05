@@ -19,7 +19,7 @@ const FEATURES = [
   },
   {
     title: "Collection & Delivery",
-    description: "Order online for fast collection or delivery across the island.",
+    description: "Order online for fast collection, or delivery across the island for a flat rate of £3.",
     icon: (
       <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM18.75 18.75a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM3.75 6.75h10.5v9.75H4.5a.75.75 0 01-.75-.75V6.75zM14.25 9.75h3l3 3.75v3a.75.75 0 01-.75.75h-1.5" />
     ),

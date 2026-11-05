@@ -27,6 +27,7 @@ export default function Menu() {
         <div className="relative z-10 w-full max-w-6xl mx-auto px-6">
           <p className="font-body text-[#fbb22a] tracking-[0.3em] uppercase text-xs sm:text-sm mb-4">Fresh Daily</p>
           <h1 className="font-display text-4xl sm:text-6xl font-bold text-white leading-tight mb-4">Our Menu</h1>
+          <p className="font-body text-white/50 text-sm sm:text-base">Flat rate delivery charge: £3</p>
         </div>
       </section>
 

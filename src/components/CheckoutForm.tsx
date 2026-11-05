@@ -25,7 +25,7 @@ export default function CheckoutForm() {
 
   const allItems = useMemo(() => menu.flatMap((c) => c.items), []);
 
-  const deliveryFee = fulfilment === "delivery" && subtotal > 0 ? 2.5 : 0;
+  const deliveryFee = fulfilment === "delivery" && subtotal > 0 ? 3 : 0;
   const total = subtotal + deliveryFee;
 
   async function handleSubmit(e: React.FormEvent) {
