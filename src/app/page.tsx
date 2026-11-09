@@ -2,6 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ORDER_URL } from "@/data/constants";
 
+const SAN_PELLEGRINO_CANS = [
+  { src: "/san-pal-drinks/limonata.png", alt: "San Pellegrino Limonata" },
+  { src: "/san-pal-drinks/limone-menta.png", alt: "San Pellegrino Limone & Menta" },
+  { src: "/san-pal-drinks/aranciata.png", alt: "San Pellegrino Aranciata" },
+  { src: "/san-pal-drinks/aranciata-rossa.png", alt: "San Pellegrino Aranciata Rossa" },
+  { src: "/san-pal-drinks/melograno-arancia.png", alt: "San Pellegrino Melograno & Arancia" },
+  { src: "/san-pal-drinks/pompelmo.png", alt: "San Pellegrino Pompelmo" },
+];
+
 const FEATURES = [
   {
     title: "Authentic Italian",
@@ -122,6 +131,46 @@ export default function Home() {
             Learn more about us →
           </Link>
         </div>
+      </section>
+
+      {/* San Pellegrino showcase */}
+      <section className="relative bg-[#0e262f] py-20 overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="relative w-[140%] sm:w-[110%] aspect-[1536/433] rotate-[-30deg]">
+            <Image
+              src="/san-pal-drinks/Sanpelegrino.svg.webp"
+              alt=""
+              fill
+              className="object-contain opacity-[0.06] brightness-0 invert"
+            />
+          </div>
+        </div>
+        <div className="relative max-w-6xl mx-auto px-6 text-center mb-14">
+          <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">Perfectly Paired</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">
+            Nothing goes better with our pizza<br className="hidden sm:block" /> than a delicious San Pellegrino.
+          </h2>
+        </div>
+        <Link href="/menu" className="relative group block">
+          <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+            {SAN_PELLEGRINO_CANS.map((can) => (
+              <div
+                key={can.src}
+                className="relative aspect-square rounded-2xl overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]"
+              >
+                <Image
+                  src={can.src}
+                  alt={can.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+          <p className="text-center font-body text-white/50 text-sm mt-10 group-hover:text-white transition-colors duration-200">
+            View the full menu →
+          </p>
+        </Link>
       </section>
 
       {/* CTA banner */}
