@@ -3,12 +3,15 @@ import Link from "next/link";
 import { ORDER_URL } from "@/data/constants";
 
 const SAN_PELLEGRINO_CANS = [
-  { src: "/san-pal-drinks/limonata.png", alt: "San Pellegrino Limonata" },
-  { src: "/san-pal-drinks/limone-menta.png", alt: "San Pellegrino Limone & Menta" },
-  { src: "/san-pal-drinks/aranciata.png", alt: "San Pellegrino Aranciata" },
-  { src: "/san-pal-drinks/aranciata-rossa.png", alt: "San Pellegrino Aranciata Rossa" },
-  { src: "/san-pal-drinks/melograno-arancia.png", alt: "San Pellegrino Melograno & Arancia" },
-  { src: "/san-pal-drinks/pompelmo.png", alt: "San Pellegrino Pompelmo" },
+  { src: "/san-pal-drinks/limonata.jpg", alt: "San Pellegrino Limonata" },
+  { src: "/san-pal-drinks/limone-menta.jpg", alt: "San Pellegrino Limone & Menta" },
+  { src: "/san-pal-drinks/aranciata.jpg", alt: "San Pellegrino Aranciata" },
+  { src: "/san-pal-drinks/aranciata-rossa.jpg", alt: "San Pellegrino Aranciata Rossa" },
+  { src: "/san-pal-drinks/melograno-arancia.jpg", alt: "San Pellegrino Melograno & Arancia" },
+  { src: "/san-pal-drinks/pompelmo.jpg", alt: "San Pellegrino Pompelmo" },
+  { src: "/drinks/pepsi-max-can.jpg", alt: "Pepsi Max" },
+  { src: "/drinks/acqua-panna-can.jpg", alt: "Acqua Panna" },
+  { src: "/drinks/sanpellegrino-sparkling-can.jpg", alt: "San Pellegrino Sparkling" },
 ];
 
 const FEATURES = [
@@ -148,7 +151,7 @@ export default function Home() {
         <div className="relative max-w-6xl mx-auto px-6 text-center mb-14">
           <p className="font-body text-[#fbb22a] tracking-[0.25em] uppercase text-xs mb-4">Perfectly Paired</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">
-            Nothing goes better with our pizza<br className="hidden sm:block" /> than a delicious San Pellegrino.
+            Nothing goes better with our pizza<br className="hidden sm:block" /> than an ice-cold drink.
           </h2>
         </div>
         <Link href="/menu" className="relative group block">
