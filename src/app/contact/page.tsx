@@ -57,9 +57,10 @@ export default function Contact() {
           <div>
             <h3 className="font-body text-white text-xs tracking-[0.2em] uppercase mb-3">Opening Hours</h3>
             <div className="font-body text-white/60 text-sm leading-relaxed flex flex-col gap-1">
-              <div className="flex justify-between max-w-xs"><span>Mon – Thu</span><span>5pm – 10pm</span></div>
-              <div className="flex justify-between max-w-xs"><span>Fri – Sat</span><span>12pm – 10pm</span></div>
-              <div className="flex justify-between max-w-xs"><span>Sunday</span><span>12pm – 9pm</span></div>
+              <div className="flex justify-between max-w-xs"><span>Mon – Thu</span><span>Closed</span></div>
+              <div className="flex justify-between max-w-xs"><span>Friday</span><span>12pm – 2pm, 4.30pm – 10pm</span></div>
+              <div className="flex justify-between max-w-xs"><span>Saturday</span><span>5pm – 10pm</span></div>
+              <div className="flex justify-between max-w-xs"><span>Sunday</span><span>Closed</span></div>
             </div>
           </div>
         </div>
